@@ -9,7 +9,9 @@
 def select_winner(passengers)
   # add the code snippet here!
   winner = ""
-  winner = passengers.map {|suite, name|if suite == :suite_a && name.start_with?("A") name
+  passengers.each {|suite, name|if suite == :suite_a && name.start_with?("A")
+    winner = name
     end
   }
+  winner
 end
